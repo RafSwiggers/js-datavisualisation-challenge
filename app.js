@@ -48,11 +48,11 @@ function BuildChart(labels, dataSets, chartTitle) {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: labels,// Our labels
+            labels: labels, // Our labels
             datasets: dataSets, // array of json objects 
         },
         options: {
-          
+
         }
     });
     return myChart;
@@ -62,8 +62,8 @@ var table = document.getElementById('table1');
 var subHeaders = []; // first label of my chart
 
 // label 
-for (var i = 2; i < table.rows[1].cells.length; i++) {
-    subHeaders[i-2] = table.rows[1].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');
+for (var x = 2; x < table.rows[1].cells.length; x++) {
+    subHeaders[x - 2] = table.rows[1].cells[x].innerHTML.toLowerCase().replace(/ /gi, '');
 }
 
 // label and value datasets
@@ -78,19 +78,19 @@ for (var i = 2; i < table.rows.length; i++) { // loop through entire table
             values.push(parseInt(tableRow.cells[k].innerHTML)); // values of the chart
         }
     }
-// json object 
+    // json object 
     var json = {
         label: country, // Name the series
         data: values, // Our values
         backgroundColor: [ // Specify custom colors
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
         ],
-        borderColor:[ //color, // Add custom color borders
+        borderColor: [ //color, // Add custom color borders
             'rgba(255,99,132,1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
@@ -115,11 +115,11 @@ function BuildCharttwo(labels, dataSets, chartTitle) {
     var myChartz = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: labels,// Our labels
+            labels: labels, // Our labels
             datasets: dataSetz,
         },
         options: {
-          
+
         }
     });
     return myChartz;
@@ -130,7 +130,7 @@ var headers = [];
 
 
 for (var i = 2; i < table.rows[0].cells.length; i++) {
-    headers[i-2] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');
+    headers[i - 2] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi, '');
 }
 
 console.log(headers);
@@ -151,7 +151,7 @@ for (var i = 2; i < table.rows.length; i++) {
 
     var jsonz = {
         label: countryz,
-        data: valuez, 
+        data: valuez,
         backgroundColor: [ // Specify custom colors
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -159,16 +159,16 @@ for (var i = 2; i < table.rows.length; i++) {
             'rgba(75, 192, 192, 0.2)',
             'rgba(153, 102, 255, 0.2)',
             'rgba(255, 159, 64, 0.2)'
-            ],
-        borderColor:[ //color, // Add custom color borders
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-        borderWidth: 1 
+        ],
+        borderColor: [ //color, // Add custom color borders
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
     };
 
     dataSetz.push(jsonz);
